@@ -19,6 +19,8 @@ namespace ThePodcastReview.Models
 
         public string Content { get; set; }
 
+        public string FavEpisodes { get; set; }
+
         public override string ToString() => PodcastTitle;
     }
 }
