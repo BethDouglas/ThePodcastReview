@@ -5,6 +5,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using ThePodcastLibrary.Data;
 
 namespace ThePodcastReview.Data
 {
@@ -31,7 +32,7 @@ namespace ThePodcastReview.Data
         {
             return new ApplicationDbContext();
         }
-
+        public DbSet<Review> Reviews { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
