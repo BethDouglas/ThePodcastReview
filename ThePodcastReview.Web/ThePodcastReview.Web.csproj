@@ -196,7 +196,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -274,6 +273,20 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ThePodcastLibrary.Data\ThePodcastLibrary.Data.csproj">
+      <Project>{32ef80a7-7d74-48d0-a177-95b1fd87134c}</Project>
+      <Name>ThePodcastLibrary.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ThePodcastReview.Models\ThePodcastReview.Models.csproj">
+      <Project>{899b5efd-fa85-4f15-a809-69ec6a3baa7a}</Project>
+      <Name>ThePodcastReview.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ThePodcastReview.Services\ThePodcastReview.Services.csproj">
+      <Project>{08149f0a-304c-41a3-a591-7147e139c4cd}</Project>
+      <Name>ThePodcastReview.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
