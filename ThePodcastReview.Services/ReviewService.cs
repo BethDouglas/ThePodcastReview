@@ -84,5 +84,26 @@ namespace ThePodcastReview.Services
                     };
             }
         }
+
+        public bool UpdateReview(ReviewEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Reviews
+                        .Single(e => e.ReviewId == model.ReviewId && e.OwnerId == _userId);
+
+                entity.PodcastTitle = model.PodcastTitle;
+                entity.Episode = model.Episode;
+                entity.Rating = model.Rating;
+                entity.Content = model.Content;
+                entity.FavEpisodes = model.FavEpisodes;
+                entity.ModifiedUtc = DateTimeOffset.UtcNow;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
     }
 }
