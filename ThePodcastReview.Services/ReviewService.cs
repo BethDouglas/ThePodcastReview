@@ -13,8 +13,6 @@ namespace ThePodcastReview.Services
 
         private readonly Guid _userId;
 
-        //This makes the user Id available to us in all methods.
-        //When we create a new instance of the ReviewService, we need to give it a userId.
         public ReviewService(Guid userId)
         {
             _userId = userId;
@@ -60,6 +58,30 @@ namespace ThePodcastReview.Services
                                 }
                         );
                 return query.ToArray();
+            }
+        }
+
+        public ReviewDetail GetReviewById(int reviewId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Reviews
+                        .Single(e => e.ReviewId == reviewId && e.OwnerId == _userId);
+                return
+                    new ReviewDetail
+                    {
+                        ReviewId = entity.ReviewId,
+                        PodcastTitle = entity.PodcastTitle,
+                        Episode = entity.Episode,
+                        Rating = entity.Rating,
+                        Content = entity.Content,
+                        FavEpisodes = entity.FavEpisodes,
+                        CreatedUtc = entity.CreatedUtc,
+                        ModifiedUtc = entity.ModifiedUtc
+
+                    };
             }
         }
     }
