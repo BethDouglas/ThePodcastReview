@@ -278,9 +278,9 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ThePodcastLibrary.Data\ThePodcastLibrary.Data.csproj">
-      <Project>{32ef80a7-7d74-48d0-a177-95b1fd87134c}</Project>
-      <Name>ThePodcastLibrary.Data</Name>
+    <ProjectReference Include="..\ThePodcastReview.Data\ThePodcastReview.Data.csproj">
+      <Project>{fc68cf17-0dcc-42d8-bf73-e25a7a743407}</Project>
+      <Name>ThePodcastReview.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\ThePodcastReview.Models\ThePodcastReview.Models.csproj">
       <Project>{899b5efd-fa85-4f15-a809-69ec6a3baa7a}</Project>

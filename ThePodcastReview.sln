@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePodcastReview.Services",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePodcastReview.Models", "ThePodcastReview.Models\ThePodcastReview.Models.csproj", "{899B5EFD-FA85-4F15-A809-69EC6A3BAA7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePodcastLibrary.Data", "ThePodcastLibrary.Data\ThePodcastLibrary.Data.csproj", "{32EF80A7-7D74-48D0-A177-95B1FD87134C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePodcastReview.Data", "ThePodcastReview.Data\ThePodcastReview.Data.csproj", "{FC68CF17-0DCC-42D8-BF73-E25A7A743407}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{899B5EFD-FA85-4F15-A809-69EC6A3BAA7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{899B5EFD-FA85-4F15-A809-69EC6A3BAA7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{899B5EFD-FA85-4F15-A809-69EC6A3BAA7A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{32EF80A7-7D74-48D0-A177-95B1FD87134C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{32EF80A7-7D74-48D0-A177-95B1FD87134C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{32EF80A7-7D74-48D0-A177-95B1FD87134C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{32EF80A7-7D74-48D0-A177-95B1FD87134C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC68CF17-0DCC-42D8-BF73-E25A7A743407}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC68CF17-0DCC-42D8-BF73-E25A7A743407}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC68CF17-0DCC-42D8-BF73-E25A7A743407}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC68CF17-0DCC-42D8-BF73-E25A7A743407}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
