@@ -57,6 +57,7 @@
     <Compile Include="ReviewCreate.cs" />
     <Compile Include="ReviewDetail.cs" />
     <Compile Include="ReviewEdit.cs" />
+    <Compile Include="ReviewListIAlltem.cs" />
     <Compile Include="ReviewListItem.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -264,6 +264,7 @@
     <Content Include="Views\Review\Delete.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\DateTimeOffset.cshtml" />
     <Content Include="Views\Review\Create.cshtml" />
+    <Content Include="Views\Review\ViewAll.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

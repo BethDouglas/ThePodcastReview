@@ -14,6 +14,11 @@ namespace ThePodcastReview.Services
 
         private readonly Guid _userId;
 
+        public ReviewService()
+        {
+                
+        }
+
         public ReviewService(Guid userId)
         {
             _userId = userId;
@@ -50,6 +55,27 @@ namespace ThePodcastReview.Services
                         .Select(
                             e =>
                                 new ReviewListItem
+                                {
+                                    ReviewId = e.ReviewId,
+                                    PodcastTitle = e.PodcastTitle,
+                                    Rating = e.Rating,
+                                    CreatedUtc = e.CreatedUtc
+                                }
+                        );
+                return query.ToArray();
+            }
+        }
+
+        public IEnumerable<ReviewListAllItem> GetAllReviews()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Reviews
+                        .Select(
+                            e =>
+                                new ReviewListAllItem
                                 {
                                     ReviewId = e.ReviewId,
                                     PodcastTitle = e.PodcastTitle,

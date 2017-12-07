@@ -33,6 +33,14 @@ namespace ThePodcastReview.Web.Controllers
             return View(model);
         }
 
+        public ActionResult ViewAll()
+        {
+            var model = _reviewService.Value.GetAllReviews();
+
+            return View(model);
+        }
+
+        [Authorize]
         public ActionResult Create()
         {
             return View();

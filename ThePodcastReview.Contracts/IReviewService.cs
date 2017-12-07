@@ -11,6 +11,7 @@ namespace ThePodcastReview.Contracts
     {
         bool CreateReview(ReviewCreate model);
         IEnumerable<ReviewListItem> GetReviews();
+        IEnumerable<ReviewListAllItem> GetAllReviews();
         ReviewDetail GetReviewById(int reviewId);
         bool UpdateReview(ReviewEdit model);
         bool DeleteReview(int reviewId);
