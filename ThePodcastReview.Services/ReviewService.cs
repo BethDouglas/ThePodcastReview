@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ThePodcastReview.Contracts;
 using ThePodcastReview.Data;
 using ThePodcastReview.Models;
 
 namespace ThePodcastReview.Services
 {
-    public class ReviewService
+    public class ReviewService : IReviewService
     {
 
         private readonly Guid _userId;
@@ -21,7 +22,7 @@ namespace ThePodcastReview.Services
         public bool CreateReview(ReviewCreate model)
         {
             var entity =
-                new Review()
+                new Review
                 {
                     OwnerId = _userId,
                     PodcastTitle = model.PodcastTitle,

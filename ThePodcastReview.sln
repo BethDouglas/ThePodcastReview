@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePodcastReview.Models", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePodcastReview.Data", "ThePodcastReview.Data\ThePodcastReview.Data.csproj", "{FC68CF17-0DCC-42D8-BF73-E25A7A743407}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePodcastReview.Contracts", "ThePodcastReview.Contracts\ThePodcastReview.Contracts.csproj", "{0CAD7122-95E9-4C80-BD54-AD4BC0613B81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{FC68CF17-0DCC-42D8-BF73-E25A7A743407}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC68CF17-0DCC-42D8-BF73-E25A7A743407}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC68CF17-0DCC-42D8-BF73-E25A7A743407}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CAD7122-95E9-4C80-BD54-AD4BC0613B81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CAD7122-95E9-4C80-BD54-AD4BC0613B81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CAD7122-95E9-4C80-BD54-AD4BC0613B81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CAD7122-95E9-4C80-BD54-AD4BC0613B81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
