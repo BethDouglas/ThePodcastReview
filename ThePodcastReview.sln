@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePodcastReview.Data", "Th
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePodcastReview.Contracts", "ThePodcastReview.Contracts\ThePodcastReview.Contracts.csproj", "{0CAD7122-95E9-4C80-BD54-AD4BC0613B81}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePodcastReview.Web.Tests", "ThePodcastReview.Web.Tests\ThePodcastReview.Web.Tests.csproj", "{59745754-D316-4FCF-9E3F-F3476AE2523C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{0CAD7122-95E9-4C80-BD54-AD4BC0613B81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CAD7122-95E9-4C80-BD54-AD4BC0613B81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CAD7122-95E9-4C80-BD54-AD4BC0613B81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59745754-D316-4FCF-9E3F-F3476AE2523C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59745754-D316-4FCF-9E3F-F3476AE2523C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59745754-D316-4FCF-9E3F-F3476AE2523C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59745754-D316-4FCF-9E3F-F3476AE2523C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

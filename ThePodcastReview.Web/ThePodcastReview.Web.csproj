@@ -282,6 +282,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ThePodcastReview.Contracts\ThePodcastReview.Contracts.csproj">
+      <Project>{0CAD7122-95E9-4C80-BD54-AD4BC0613B81}</Project>
+      <Name>ThePodcastReview.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ThePodcastReview.Data\ThePodcastReview.Data.csproj">
       <Project>{fc68cf17-0dcc-42d8-bf73-e25a7a743407}</Project>
       <Name>ThePodcastReview.Data</Name>

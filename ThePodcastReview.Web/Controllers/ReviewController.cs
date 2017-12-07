@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
+using ThePodcastReview.Contracts;
 using ThePodcastReview.Models;
 using ThePodcastReview.Services;
 
@@ -11,12 +12,23 @@ namespace ThePodcastReview.Web.Controllers
 {
     public class ReviewController : Controller
     {
+        private readonly Lazy<IReviewService> _reviewService;
+
+        public ReviewController()
+        {
+            _reviewService = new Lazy<IReviewService>(() =>
+                new ReviewService(Guid.Parse(User.Identity.GetUserId())));
+        }
+
+        public ReviewController(Lazy<IReviewService> reviewService)
+        {
+            _reviewService = reviewService;
+        }
+
         // GET: Review
         public ActionResult Index()
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new ReviewService(userId);
-            var model = service.GetReviews();
+            var model = _reviewService.Value.GetReviews();
 
             return View(model);
         }
@@ -32,9 +44,7 @@ namespace ThePodcastReview.Web.Controllers
         {
             if (!ModelState.IsValid) return View(model);
 
-            var service = CreateReviewService();
-
-            if (service.CreateReview(model))
+            if (_reviewService.Value.CreateReview(model))
             {
                 TempData["SaveResult"] = "Your review was created, thank you.";
                 return RedirectToAction("Index");
@@ -48,16 +58,15 @@ namespace ThePodcastReview.Web.Controllers
 
         public ActionResult Details(int id)
         {
-            var svc = CreateReviewService();
-            var model = svc.GetReviewById(id);
+            var model = _reviewService.Value.
+                GetReviewById(id);
 
             return View(model);
         }
 
         public ActionResult Edit(int id)
         {
-            var service = CreateReviewService();
-            var detail = service.GetReviewById(id);
+            var detail = _reviewService.Value.GetReviewById(id);
             var model =
                 new ReviewEdit
                 {
@@ -84,9 +93,7 @@ namespace ThePodcastReview.Web.Controllers
                 return View(model);
             }
 
-            var service = CreateReviewService();
-
-            if(service.UpdateReview(model))
+            if(_reviewService.Value.UpdateReview(model))
             {
                 TempData["SaveResult"] = "Your review was updated";
                 return RedirectToAction("Index");
@@ -99,8 +106,7 @@ namespace ThePodcastReview.Web.Controllers
         [ActionName("Delete")]
         public ActionResult Delete(int id)
         {
-            var svc = CreateReviewService();
-            var model = svc.GetReviewById(id);
+            var model = _reviewService.Value.GetReviewById(id);
 
             return View(model);
         }
@@ -110,20 +116,12 @@ namespace ThePodcastReview.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeletePost(int id)
         {
-            var service = CreateReviewService();
 
-            service.DeleteReview(id);
+            _reviewService.Value.DeleteReview(id);
 
             TempData["SaveResult"] = "Your review was deleted";
 
             return RedirectToAction("Index");
-        }
-
-        private ReviewService CreateReviewService()
-        {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new ReviewService(userId);
-            return service;
         }
     }
 }
