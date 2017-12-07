@@ -37,7 +37,6 @@ namespace ThePodcastReview.Services
                 ctx.Reviews.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
-
         }
 
         public IEnumerable<ReviewListItem> GetReviews()
