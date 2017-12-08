@@ -26,6 +26,11 @@ namespace ThePodcastReview.Web.Tests.Controllers.ReviewControllerTests
             throw new NotImplementedException();
         }
 
+        public IEnumerable<ReviewListAllItem> GetAllReviews()
+        {
+            throw new NotImplementedException();
+        }
+
         public ReviewDetail GetReviewById(int reviewId)
         {
             throw new NotImplementedException();

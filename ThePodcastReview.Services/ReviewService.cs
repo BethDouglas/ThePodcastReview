@@ -94,7 +94,7 @@ namespace ThePodcastReview.Services
                 var entity =
                     ctx
                         .Reviews
-                        .Single(e => e.ReviewId == reviewId && e.OwnerId == _userId);
+                        .Single(e => e.ReviewId == reviewId);
                 return
                     new ReviewDetail
                     {

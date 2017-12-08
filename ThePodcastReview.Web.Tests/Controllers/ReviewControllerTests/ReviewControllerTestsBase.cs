@@ -23,6 +23,7 @@ namespace ThePodcastReview.Web.Tests.Controllers.ReviewControllerTests
 
             Controller = new ReviewController(
                 new Lazy<IReviewService>(() => Service));
+
         }
 
     }

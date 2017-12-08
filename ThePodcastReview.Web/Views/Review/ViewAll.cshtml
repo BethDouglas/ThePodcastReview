@@ -7,13 +7,16 @@
 <h2>ViewAll</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @if (User.Identity.IsAuthenticated)
+    {
+        @Html.ActionLink("Create New", "Create")
+    }
 </p>
 <table class="table">
     <tr>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.ReviewId)
-        </th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.PodcastTitle)
         </th>
@@ -48,7 +51,7 @@
         </td>
         <td>
             @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |*@
-            @Html.ActionLink("Details", "Details", new { id=item.ReviewId }) |
+            @Html.ActionLink("Read Review", "Details", new { id=item.ReviewId })
             @*@Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
         </td>
     </tr>

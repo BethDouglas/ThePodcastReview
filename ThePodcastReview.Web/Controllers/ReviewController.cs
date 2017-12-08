@@ -64,8 +64,7 @@ namespace ThePodcastReview.Web.Controllers
 
         public ActionResult Details(int id)
         {
-            var model = _reviewService.Value.
-                GetReviewById(id);
+            var model = _reviewServiceNoGuid.GetReviewById(id);
 
             return View(model);
         }

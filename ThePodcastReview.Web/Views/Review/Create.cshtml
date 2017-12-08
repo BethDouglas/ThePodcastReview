@@ -11,7 +11,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>ReviewCreate</h4>
+        <h4>Review a Podcast</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -63,5 +63,6 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to My Reviews", "Index")
+    @Html.ActionLink("Back to All Reviews", "ViewAll")
 </div>
