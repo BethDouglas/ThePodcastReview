@@ -4,7 +4,7 @@
     ViewBag.Title = "ViewAll";
 }
 
-<h2>ViewAll</h2>
+<h2>Reviews</h2>
 
 <p>
     @if (User.Identity.IsAuthenticated)
@@ -34,9 +34,9 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.ReviewId)
-        </td>
+        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.PodcastTitle)
         </td>
