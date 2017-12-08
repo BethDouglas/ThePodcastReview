@@ -14,15 +14,13 @@ namespace ThePodcastReview.Web.Controllers
     {
         private readonly Lazy<IReviewService> _reviewService;
 
+        private readonly ReviewService _reviewServiceNoGuid;
+
         public ReviewController()
         {
             _reviewService = new Lazy<IReviewService>(() =>
                 new ReviewService(Guid.Parse(User.Identity.GetUserId())));
-        }
-
-        public ReviewController(Lazy<IReviewService> reviewService)
-        {
-            _reviewService = reviewService;
+            _reviewServiceNoGuid = new ReviewService();
         }
 
         // GET: Review
@@ -35,7 +33,7 @@ namespace ThePodcastReview.Web.Controllers
 
         public ActionResult ViewAll()
         {
-            var model = _reviewService.Value.GetAllReviews();
+            var model = _reviewServiceNoGuid.GetAllReviews();
 
             return View(model);
         }
