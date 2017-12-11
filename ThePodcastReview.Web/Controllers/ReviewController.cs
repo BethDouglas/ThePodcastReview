@@ -23,6 +23,11 @@ namespace ThePodcastReview.Web.Controllers
             _reviewServiceNoGuid = new ReviewService();
         }
 
+        public ReviewController(Lazy<IReviewService> reviewService)
+        {
+            _reviewService = reviewService;
+        }
+
         // GET: Review
         public ActionResult Index()
         {
