@@ -4,10 +4,10 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Review Details</h2>
 
 <div>
-    <h4>ReviewDetail</h4>
+    @*<h4>Review Details</h4>*@
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -79,8 +79,9 @@
 <p>
     @if (User.Identity.IsAuthenticated)
     {
-        @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewId })
+        @*@Html.ActionLink("Edit", "Edit", new { id = Model.ReviewId })*@
+        @Html.ActionLink("Back to my reviews", "Index")
     }
-    
-    @Html.ActionLink("Back to List", "Index")
+
+    @Html.ActionLink("Back to all reviews", "ViewAll")
 </p>
