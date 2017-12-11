@@ -66,6 +66,25 @@ namespace ThePodcastReview.Services
             }
         }
 
+        //public IEnumerable<Reviewer> GetReviewer()
+        //{
+        //    using (var ctx = new ApplicationDbContext(ApplicationUser(_userId)))
+        //    {
+        //        var query =
+        //            ctx
+        //                .Reviews
+        //                .Where(e => e.OwnerId == _userId)
+        //                .Select(
+        //                    e =>
+        //                        new Reviewer
+        //                        {
+        //                            Reviewer = e.userName,
+        //                        }
+        //                );
+        //        return query.ToArray();
+        //    }
+        //}
+
         public IEnumerable<ReviewListAllItem> GetAllReviews()
         {
             using (var ctx = new ApplicationDbContext())

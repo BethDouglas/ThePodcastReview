@@ -31,6 +31,8 @@ namespace ThePodcastReview.Data
         [MaxLength(2000)]
         public string Content { get; set; }
 
+        //public string Reviewer { get; set; }
+
         public string FavEpisodes { get; set; }
 
         [Required]

@@ -16,8 +16,6 @@ namespace ThePodcastReview.Models
 
         public int Rating { get; set; }
 
-        public string Reviewer { get; set; }
-
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
 
