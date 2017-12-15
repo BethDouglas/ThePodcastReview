@@ -115,6 +115,7 @@ namespace ThePodcastReview.Services
                                 new ReviewListAllItem
                                 {
                                     ReviewId = e.ReviewId,
+                                    UserId = e.OwnerId,
                                     PodcastTitle = e.PodcastTitle,
                                     Rating = e.Rating,
                                     CreatedUtc = e.CreatedUtc

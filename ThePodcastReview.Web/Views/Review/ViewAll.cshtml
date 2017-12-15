@@ -1,4 +1,5 @@
-﻿@model IEnumerable<ThePodcastReview.Models.ReviewListAllItem>
+﻿@using Microsoft.AspNet.Identity
+@model IEnumerable<ThePodcastReview.Models.ReviewListAllItem>
 
 @{
     ViewBag.Title = "ViewAll";
@@ -50,9 +51,14 @@
             @Html.DisplayFor(modelItem => item.CreatedUtc)
         </td>
         <td>
-            @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |*@
+            
             @Html.ActionLink("Read Review", "Details", new { id=item.ReviewId })
-            @*@Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+            @if(User.Identity.IsAuthenticated && (Guid.Parse(User.Identity.GetUserId())== item.UserId))
+            {
+                @Html.ActionLink("Edit", "Edit", new { id = item.ReviewId });
+                @Html.ActionLink("Delete", "Delete", new { id=item.ReviewId })
+            }
+
         </td>
     </tr>
 }
