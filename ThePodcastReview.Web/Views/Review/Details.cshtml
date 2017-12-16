@@ -6,42 +6,30 @@
 
 @*<h2>Review Details</h2>*@
 
-<div>
     <div class="row">
-        <div class="col-md-4">
-            <div class="panel panel-yellow">
-                <div class="panel-heading">
-                    @Html.DisplayFor(model => model.PodcastTitle)
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="panel panel-yellow">
-                <div class="panel-heading">
-                    @Html.DisplayFor(model => model.Episode)
-                </div>
-            </div>
-        </div>
+        <h1>     </h1>
     </div>
     <div>
         <div class="row">
             <div class="col-md-8">
                 <div class="panel panel-yellow">
                     <div class="panel-heading">
-                        @Html.DisplayNameFor(model => model.Content)
+                        <h4><strong>@Html.DisplayFor(model => model.PodcastTitle)</strong></h4>
                     </div>
                     <div class="panel-body">
                         @Html.DisplayFor(model => model.Content)
-                        @Html.DisplayNameFor(model => model.CreatedUtc)
-                        @Html.DisplayFor(model => model.CreatedUtc)
-                           
+                        <h5 style="text-align:right"> - Reviewer</h5>
+                        <h6 style="text-align:right">@Html.DisplayNameFor(model => model.CreatedUtc) - 
+                            @Html.DisplayFor(model => model.CreatedUtc)</h6>
+                        <h6 style="text-align:right">@Html.DisplayNameFor(model => model.ModifiedUtc) - 
+                        @Html.DisplayFor(model => model.ModifiedUtc)</h6>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-yellow">
                     <div class="panel-heading">
-                        @Html.DisplayNameFor(model => model.FavEpisodes)
+                        <h4><strong>@Html.DisplayNameFor(model => model.FavEpisodes)</strong></h4>
                     </div>
                     <div class="panel-body">
                         @Html.DisplayFor(model => model.FavEpisodes)
