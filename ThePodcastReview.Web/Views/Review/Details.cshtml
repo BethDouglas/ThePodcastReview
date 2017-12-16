@@ -4,20 +4,13 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Review Details</h2>
+@*<h2>Review Details</h2>*@
 
 <div>
-
-    
-    @*<h4>Review Details</h4>*@
-    <hr />
-    <div>
+    <div class="row">
         <div class="col-md-4">
             <div class="panel panel-yellow">
                 <div class="panel-heading">
-                    @Html.DisplayNameFor(model => model.PodcastTitle)
-                </div>
-                <div class="panel-body">
                     @Html.DisplayFor(model => model.PodcastTitle)
                 </div>
             </div>
@@ -25,42 +18,43 @@
         <div class="col-md-4">
             <div class="panel panel-yellow">
                 <div class="panel-heading">
-                    @Html.DisplayNameFor(model => model.Episode)
-                </div>
-                <div class="panel-body">
                     @Html.DisplayFor(model => model.Episode)
                 </div>
             </div>
         </div>
     </div>
-<div>
-    <div class="col-md-8">
-        <div class="panel panel-yellow">
-            <div class="panel-heading">
-                @Html.DisplayNameFor(model => model.Content)
+    <div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="panel panel-yellow">
+                    <div class="panel-heading">
+                        @Html.DisplayNameFor(model => model.Content)
+                    </div>
+                    <div class="panel-body">
+                        @Html.DisplayFor(model => model.Content)
+                        @Html.DisplayNameFor(model => model.CreatedUtc)
+                        @Html.DisplayFor(model => model.CreatedUtc)
+                           
+                    </div>
+                </div>
             </div>
-            <div class="panel-body">
-                @Html.DisplayFor(model => model.Content)
+            <div class="col-md-4">
+                <div class="panel panel-yellow">
+                    <div class="panel-heading">
+                        @Html.DisplayNameFor(model => model.FavEpisodes)
+                    </div>
+                    <div class="panel-body">
+                        @Html.DisplayFor(model => model.FavEpisodes)
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-md-4">
-        <div class="panel panel-yellow">
-            <div class="panel-heading">
-                @Html.DisplayNameFor(model => model.FavEpisodes)
-            </div>
-            <div class="panel-body">
-                @Html.DisplayFor(model => model.FavEpisodes)
-            </div>
-        </div>
-    </div>
-
-
-</div>
 
 
 
-    @*<dl class="dl-horizontal">
+
+@*<dl class="dl-horizontal">
 
 
         <dt>
@@ -89,13 +83,13 @@
         </dd>
 
     </dl>*@
-</div>
-@*<p>
-    @if (User.Identity.IsAuthenticated)
-    {
-        @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewId })
-        @Html.ActionLink("Back to my reviews", "Index")
-    }
 
-    @Html.ActionLink("Back to all reviews", "ViewAll")
-</p>*@
+@*<p>
+        @if (User.Identity.IsAuthenticated)
+        {
+            @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewId })
+            @Html.ActionLink("Back to my reviews", "Index")
+        }
+
+        @Html.ActionLink("Back to all reviews", "ViewAll")
+    </p>*@
