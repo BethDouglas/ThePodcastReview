@@ -22,9 +22,11 @@ namespace ThePodcastReview.Models
         public int Rating { get; set; }
 
         [Required]
+        [DataType(DataType.MultilineText)]
         [Display(Name = "Review*")]
         public string Content { get; set; }
 
+        [DataType(DataType.MultilineText)]
         [Display(Name = "Favorite Episodes")]
         public string FavEpisodes { get; set; }
 
