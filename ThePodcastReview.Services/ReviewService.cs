@@ -159,7 +159,7 @@ namespace ThePodcastReview.Services
                         .Reviews
                         .Single(e => e.ReviewId == model.ReviewId && e.OwnerId == _userId);
 
-                entity.PodcastTitle = model.PodcastTitle;
+                entity.PodcastTitle = model.PodcastTitle;  
                 entity.Episode = model.Episode;
                 entity.Rating = model.Rating;
                 entity.Content = model.Content;

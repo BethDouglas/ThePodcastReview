@@ -5,15 +5,6 @@
     ViewBag.Title = "Details";
 }
 <div>
-    <div class="row">
-        <p>
-            @if (User.Identity.IsAuthenticated && (Guid.Parse(User.Identity.GetUserId()) == Model.UserId))
-            {
-                @Html.ActionLink("Back to my reviews", "Index")
-            }
-            @Html.ActionLink("Back to all reviews", "ViewAll")
-        </p>
-    </div>
     <div>
         <div class="row">
             <div class="col-md-8">
@@ -48,14 +39,22 @@
     </div>
 </div>
 </div>
-<div class="row">
+<div>
     <p>
         @if (User.Identity.IsAuthenticated && (Guid.Parse(User.Identity.GetUserId()) == Model.UserId))
         {
-            <button type="button" class="btn btn-sm btn-primary">@Html.ActionLink("Edit", "Edit", new { id = Model.ReviewId })</button>
+            <button type="button" class="btn btn-sm btn-default">@Html.ActionLink("Edit", "Edit", new { id = Model.ReviewId })</button>
 
-            <button type="button" class="btn btn-sm btn-danger">@Html.ActionLink("Delete", "Delete", new { id = Model.ReviewId })</button>
+            <button type="button" class="btn btn-sm btn-default">@Html.ActionLink("Delete", "Delete", new { id = Model.ReviewId })</button>
         }
     </p>
 </div>
 </div>
+<div>
+        @if (User.Identity.IsAuthenticated && (Guid.Parse(User.Identity.GetUserId()) == Model.UserId))
+            {
+            @Html.ActionLink("Back to my reviews", "Index")
+        }
+        |@Html.ActionLink("Back to all reviews", "ViewAll")
+</div>
+

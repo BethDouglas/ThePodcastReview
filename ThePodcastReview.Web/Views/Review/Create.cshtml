@@ -1,4 +1,5 @@
-﻿@model ThePodcastReview.Models.ReviewCreate
+﻿@using Microsoft.AspNet.Identity
+@model ThePodcastReview.Models.ReviewCreate
 
 @{
     ViewBag.Title = "Create";
@@ -38,7 +39,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.Content, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-3">
+            <div class="col-md-10">
                 @Html.EditorFor(model => model.Content, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
             </div>
@@ -46,7 +47,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.FavEpisodes, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-3">
+            <div class="col-md-10">
                 @Html.EditorFor(model => model.FavEpisodes, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.FavEpisodes, "", new { @class = "text-danger" })
             </div>
@@ -61,6 +62,6 @@
 }
 
 <div>
-    @Html.ActionLink("Back to My Reviews", "Index") |    
-    @Html.ActionLink("Back to All Reviews", "ViewAll")
+     @Html.ActionLink("Back to My Reviews", "Index") |
+     @Html.ActionLink("Back to All Reviews", "ViewAll")
 </div>
