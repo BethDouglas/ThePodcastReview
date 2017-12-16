@@ -1,13 +1,18 @@
-﻿@model ThePodcastReview.Models.ReviewDetail
+﻿@using Microsoft.AspNet.Identity
+@model ThePodcastReview.Models.ReviewDetail
 
 @{
     ViewBag.Title = "Details";
 }
-
-@*<h2>Review Details</h2>*@
-
+<div>
     <div class="row">
-        <h1>     </h1>
+        <p>
+            @if (User.Identity.IsAuthenticated && (Guid.Parse(User.Identity.GetUserId()) == Model.UserId))
+            {
+                @Html.ActionLink("Back to my reviews", "Index")
+            }
+            @Html.ActionLink("Back to all reviews", "ViewAll")
+        </p>
     </div>
     <div>
         <div class="row">
@@ -19,65 +24,38 @@
                     <div class="panel-body">
                         @Html.DisplayFor(model => model.Content)
                         <h5 style="text-align:right"> - Reviewer</h5>
-                        <h6 style="text-align:right">@Html.DisplayNameFor(model => model.CreatedUtc) - 
-                            @Html.DisplayFor(model => model.CreatedUtc)</h6>
-                        <h6 style="text-align:right">@Html.DisplayNameFor(model => model.ModifiedUtc) - 
-                        @Html.DisplayFor(model => model.ModifiedUtc)</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-yellow">
-                    <div class="panel-heading">
-                        <h4><strong>@Html.DisplayNameFor(model => model.FavEpisodes)</strong></h4>
-                    </div>
-                    <div class="panel-body">
-                        @Html.DisplayFor(model => model.FavEpisodes)
-                    </div>
-                </div>
+                        <h6 style="text-align:right">
+                            @Html.DisplayNameFor(model => model.CreatedUtc) -
+                        @Html.DisplayFor(model => model.CreatedUtc)
+                    </h6>
+                    <h6 style="text-align:right">
+                        @Html.DisplayNameFor(model => model.ModifiedUtc) -
+                    @Html.DisplayFor(model => model.ModifiedUtc)
+                </h6>
+                <h5 style="text-align:left">@Html.DisplayFor(model => model.Rating)</h5>
             </div>
         </div>
     </div>
-
-
-
-
-@*<dl class="dl-horizontal">
-
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Rating)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Rating)
-        </dd>
-
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CreatedUtc)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CreatedUtc)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ModifiedUtc)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ModifiedUtc)
-        </dd>
-
-    </dl>*@
-
-@*<p>
-        @if (User.Identity.IsAuthenticated)
+    <div class="col-md-4">
+        <div class="panel panel-yellow">
+            <div class="panel-heading">
+                <h4><strong>@Html.DisplayNameFor(model => model.FavEpisodes)</strong></h4>
+            </div>
+            <div class="panel-body">
+                @Html.DisplayFor(model => model.FavEpisodes)
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="row">
+    <p>
+        @if (User.Identity.IsAuthenticated && (Guid.Parse(User.Identity.GetUserId()) == Model.UserId))
         {
-            @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewId })
-            @Html.ActionLink("Back to my reviews", "Index")
-        }
+            <button type="button" class="btn btn-sm btn-primary">@Html.ActionLink("Edit", "Edit", new { id = Model.ReviewId })</button>
 
-        @Html.ActionLink("Back to all reviews", "ViewAll")
-    </p>*@
+            <button type="button" class="btn btn-sm btn-danger">@Html.ActionLink("Delete", "Delete", new { id = Model.ReviewId })</button>
+        }
+    </p>
+</div>
+</div>

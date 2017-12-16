@@ -23,6 +23,8 @@ namespace ThePodcastReview.Models
         [Display(Name ="Created")]
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
+        public Guid UserId { get; set; }
+
         public override string ToString() => $"[{ReviewId}] {PodcastTitle}";
     }
 }

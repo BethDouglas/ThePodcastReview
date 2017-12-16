@@ -137,6 +137,7 @@ namespace ThePodcastReview.Services
                     new ReviewDetail
                     {
                         ReviewId = entity.ReviewId,
+                        UserId = entity.OwnerId,
                         PodcastTitle = entity.PodcastTitle,
                         Episode = entity.Episode,
                         Rating = entity.Rating,
