@@ -10,7 +10,7 @@
 <p>
     @if (User.Identity.IsAuthenticated)
     {
-        @Html.ActionLink("Create New", "Create")
+        <a href="/Review/Create" class="btn btn-primary btn-md">Create Review</a>
     }
 </p>
 <table class="table">
@@ -52,10 +52,10 @@
         </td>
         <td>
             
-            @Html.ActionLink("Read Review", "Details", new { id=item.ReviewId })
+            @Html.ActionLink("Read Review ", "Details", new { id=item.ReviewId })
             @if(User.Identity.IsAuthenticated && (Guid.Parse(User.Identity.GetUserId())== item.UserId))
             {
-                @Html.ActionLink("Edit", "Edit", new { id = item.ReviewId });
+                @Html.ActionLink("| Edit | ", "Edit", new { id = item.ReviewId })
                 @Html.ActionLink("Delete", "Delete", new { id=item.ReviewId })
             }
 

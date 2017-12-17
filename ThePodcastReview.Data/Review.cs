@@ -29,6 +29,7 @@ namespace ThePodcastReview.Data
 
         [Required]
         [MaxLength(2000)]
+        [Display(Name = "Review")]
         public string Content { get; set; }
 
         //public string Reviewer { get; set; }

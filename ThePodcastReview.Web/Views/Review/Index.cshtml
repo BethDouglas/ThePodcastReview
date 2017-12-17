@@ -7,7 +7,7 @@
 <h2>My Reviews</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <a href="/Review/Create" class="btn btn-primary btn-md">Create Review</a>
 </p>
 
 @if (TempData.ContainsKey("SaveResult"))
@@ -59,9 +59,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.CreatedUtc)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ReviewId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ReviewId }) |
+        <td>            
+            @Html.ActionLink("Read Review", "Details", new { id=item.ReviewId }) |
+            @Html.ActionLink("Edit", "Edit", new { id = item.ReviewId }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.ReviewId })
         </td>
     </tr>

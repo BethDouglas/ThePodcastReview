@@ -15,6 +15,8 @@ namespace ThePodcastReview.Models
 
         public string Episode { get; set; }
         public int Rating { get; set; }
+
+        [Display(Name ="Review")]
         public string Content { get; set; }
 
         [Display(Name ="Favorite Episodes")]
@@ -22,6 +24,8 @@ namespace ThePodcastReview.Models
 
         [Display(Name ="Created")]
         public DateTimeOffset CreatedUtc { get; set; }
+
+        [Display(Name = "Modified")]
         public DateTimeOffset? ModifiedUtc { get; set; }
         public Guid UserId { get; set; }
 
