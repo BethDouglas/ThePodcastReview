@@ -23,6 +23,15 @@ textarea {
     max-width: 500px;
 }
 
+.navbar-fixed-bottom {
+    background-color: white;
+}
+
+.panel-heading {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
 
 
 
