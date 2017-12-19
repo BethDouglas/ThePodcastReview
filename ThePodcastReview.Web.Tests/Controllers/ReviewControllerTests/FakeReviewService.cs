@@ -41,6 +41,11 @@ namespace ThePodcastReview.Web.Tests.Controllers.ReviewControllerTests
             throw new NotImplementedException();
         }
 
+        public ICollection<ReviewListItem> GetReviews(int reviewId)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool UpdateReview(ReviewEdit model)
         {
             throw new NotImplementedException();
