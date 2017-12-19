@@ -16,7 +16,7 @@ namespace ThePodcastReview.Models
         public string Episode { get; set; }
         public int Rating { get; set; }
 
-        [Display(Name ="Review")]
+        [Display(Name ="Review")]        
         public string Content { get; set; }
 
         [Display(Name ="Favorite Episodes")]

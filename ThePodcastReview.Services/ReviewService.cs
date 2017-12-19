@@ -58,6 +58,7 @@ namespace ThePodcastReview.Services
                                 {
                                     ReviewId = e.ReviewId,
                                     PodcastTitle = e.PodcastTitle,
+                                    Content= e.Content,
                                     Rating = e.Rating,
                                     CreatedUtc = e.CreatedUtc
                                 }
@@ -80,6 +81,7 @@ namespace ThePodcastReview.Services
                                     ReviewId = e.ReviewId,
                                     UserId = e.OwnerId,
                                     PodcastTitle = e.PodcastTitle,
+                                    Content = e.Content,
                                     Rating = e.Rating,
                                     CreatedUtc = e.CreatedUtc
                                 }

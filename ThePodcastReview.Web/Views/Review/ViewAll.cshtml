@@ -22,6 +22,9 @@
             @Html.DisplayNameFor(model => model.PodcastTitle)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Content)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Rating)
         </th>
         <th>
@@ -40,6 +43,9 @@
         </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.PodcastTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Content)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Rating)

@@ -14,6 +14,11 @@ namespace ThePodcastReview.Models
         [Display(Name = "Podcast")]
         public string PodcastTitle { get; set; }
 
+
+        [MaxLength(5)]
+        [Display(Name = "Review")]
+        public string Content { get; set; }
+
         public int Rating { get; set; }
 
         [Display(Name = "Created")]
