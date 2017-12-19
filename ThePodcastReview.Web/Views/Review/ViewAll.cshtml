@@ -22,18 +22,18 @@
             @Html.DisplayNameFor(model => model.PodcastTitle)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Content)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.Rating)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Reviewer)
+            @Html.DisplayNameFor(model => model.Content)
         </th>
+        <th>Actions</th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Reviewer)
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.CreatedUtc)
         </th>
-        <th></th>
     </tr>
 
 @foreach (var item in Model) {
@@ -45,27 +45,28 @@
             @Html.DisplayFor(modelItem => item.PodcastTitle)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Content)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.Rating)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Reviewer)
+            @Html.DisplayFor(modelItem => item.ContentTrimmed)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.CreatedUtc)
-        </td>
-        <td>
-            
-            @Html.ActionLink("Read Review ", "Details", new { id=item.ReviewId })
-            @if(User.Identity.IsAuthenticated && (Guid.Parse(User.Identity.GetUserId())== item.UserId))
+
+            @Html.ActionLink("Read Review ", "Details", new { id = item.ReviewId })
+            @if (User.Identity.IsAuthenticated && (Guid.Parse(User.Identity.GetUserId()) == item.UserId))
             {
                 @Html.ActionLink("| Edit | ", "Edit", new { id = item.ReviewId })
-                @Html.ActionLink("Delete", "Delete", new { id=item.ReviewId })
+                @Html.ActionLink("Delete", "Delete", new { id = item.ReviewId })
             }
 
         </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Reviewer)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedUtc)
+        </td>
+
     </tr>
 }
 

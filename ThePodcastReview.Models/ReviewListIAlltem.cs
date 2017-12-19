@@ -14,16 +14,29 @@ namespace ThePodcastReview.Models
         [Display(Name = "Podcast")]
         public string PodcastTitle { get; set; }
 
-        [StringLength(5)]
         [Display(Name = "Review")]
         public string Content { get; set; }
+
+        private int ContentLimit = 100;
+
+        public string ContentTrimmed
+        {
+            get
+            {
+                if (this.Content.Length > this.ContentLimit)
+                    return this.Content.Substring(0, this.ContentLimit) + "...";
+                else
+                    return this.Content;
+            }
+
+        }
 
         public int Rating { get; set; }
 
         //[DisplayLength?
         //public string Content { get; set; }
 
-        public string Reviewer { get; set; }
+        //public string Reviewer { get; set; }
 
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
