@@ -15,8 +15,6 @@ namespace ThePodcastReview.Models
         [Display(Name = "Podcast*")]
         public string PodcastTitle { get; set; }
 
-        //public string Episode { get; set; }
-
         [Required]
         [Display(Name = "Rating*")]
         [Range(1, 5, ErrorMessage = "Rating must be between 1 and 5")]

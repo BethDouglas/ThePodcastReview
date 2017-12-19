@@ -33,11 +33,6 @@ namespace ThePodcastReview.Models
 
         public int Rating { get; set; }
 
-        //[DisplayLength?
-        //public string Content { get; set; }
-
-        //public string Reviewer { get; set; }
-
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
         public Guid UserId { get; set; }

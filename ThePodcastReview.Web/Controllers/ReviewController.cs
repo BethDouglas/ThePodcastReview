@@ -82,7 +82,6 @@ namespace ThePodcastReview.Web.Controllers
                 {
                     ReviewId = detail.ReviewId,
                     PodcastTitle = detail.PodcastTitle,
-                    //Episode = detail.Episode,
                     Rating = detail.Rating,
                     Content = detail.Content,
                     FavEpisodes = detail.FavEpisodes,
