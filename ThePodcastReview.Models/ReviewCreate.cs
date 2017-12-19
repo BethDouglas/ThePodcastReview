@@ -13,8 +13,8 @@ namespace ThePodcastReview.Models
         [Display(Name = "Podcast*")]
         public string PodcastTitle { get; set; }
 
-        [Display(Name = "Episode")]
-        public string Episode { get; set; }
+        //[Display(Name = "Episode")]
+        //public string Episode { get; set; }
 
         [Required]
         [Display(Name = "Rating*")]        

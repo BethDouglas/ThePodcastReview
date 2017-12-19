@@ -53,8 +53,8 @@
 <div>
         @if (User.Identity.IsAuthenticated && (Guid.Parse(User.Identity.GetUserId()) == Model.UserId))
             {
-            @Html.ActionLink("Back to my reviews", "Index")
+            @Html.ActionLink("Back to my reviews", "Index")@: |
         }
-        |@Html.ActionLink("Back to all reviews", "ViewAll")
+        @Html.ActionLink("Back to all reviews", "ViewAll")
 </div>
 

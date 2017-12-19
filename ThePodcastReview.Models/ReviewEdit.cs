@@ -15,7 +15,7 @@ namespace ThePodcastReview.Models
         [Display(Name = "Podcast*")]
         public string PodcastTitle { get; set; }
 
-        public string Episode { get; set; }
+        //public string Episode { get; set; }
 
         [Required]
         [Display(Name = "Rating*")]
