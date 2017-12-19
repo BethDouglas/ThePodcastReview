@@ -9,11 +9,14 @@ namespace ThePodcastReview.Models
 {
     public class ReviewDetail
     {
+        [Required]
         public int ReviewId { get; set; }
+
+
         [Display(Name = "Podcast")]
         public string PodcastTitle { get; set; }
 
-        public string Episode { get; set; }
+
         public int Rating { get; set; }
 
         [Display(Name ="Review")]
@@ -27,6 +30,8 @@ namespace ThePodcastReview.Models
 
         [Display(Name = "Modified")]
         public DateTimeOffset? ModifiedUtc { get; set; }
+
+        [Required]
         public Guid UserId { get; set; }
 
         public override string ToString() => $"[{ReviewId}] {PodcastTitle}";

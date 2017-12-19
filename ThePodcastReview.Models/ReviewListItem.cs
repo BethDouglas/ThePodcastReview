@@ -11,10 +11,17 @@ namespace ThePodcastReview.Models
     {
         public int ReviewId { get; set; }
 
+        public Guid UserId { get; set; }
+
+        public string UserName { get; set; }
+
         [Display(Name = "Podcast")]
         public string PodcastTitle { get; set; }
 
         public int Rating { get; set; }
+
+        //[DisplayLength?
+        //public string Content { get; set; }
 
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }

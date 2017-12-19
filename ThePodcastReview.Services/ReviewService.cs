@@ -31,7 +31,6 @@ namespace ThePodcastReview.Services
                 {
                     OwnerId = _userId,
                     PodcastTitle = model.PodcastTitle,
-                    Episode = model.Episode,
                     Rating = model.Rating,
                     Content = model.Content,
                     FavEpisodes = model.FavEpisodes,
@@ -44,27 +43,71 @@ namespace ThePodcastReview.Services
             }
         }
 
-        public IEnumerable<ReviewListItem> GetReviews()
+        //public IEnumerable<ReviewListItem> GetReviews()
+        //{
+        //    using (var ctx = new ApplicationDbContext())
+        //    {
+        //        var query =
+        //            ctx
+        //                .Reviews
+        //                .Where(e => e.OwnerId == _userId)
+        //                .Select(
+        //                    e =>
+        //                        new ReviewListItem
+        //                        {
+        //                            ReviewId = e.ReviewId,
+        //                            PodcastTitle = e.PodcastTitle,
+        //                            Rating = e.Rating,
+        //                            CreatedUtc = e.CreatedUtc
+        //                        }
+        //                );
+        //        return query.ToArray();
+        //    }
+        //}
+
+        public ICollection<ReviewListItem> GetReviews(int reviewId)
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var query =
+                var reviews =
                     ctx
                         .Reviews
-                        .Where(e => e.OwnerId == _userId)
+                        .Where(r => r.ReviewId == reviewId)
                         .Select(
-                            e =>
-                                new ReviewListItem
-                                {
-                                    ReviewId = e.ReviewId,
-                                    PodcastTitle = e.PodcastTitle,
-                                    Rating = e.Rating,
-                                    CreatedUtc = e.CreatedUtc
-                                }
-                        );
-                return query.ToArray();
+                            e => new ReviewListItem()
+                            {
+                                ReviewId = e.ReviewId,
+                                UserId = e.OwnerId,
+                                PodcastTitle = e.PodcastTitle,
+                                Rating = e.Rating,
+                                CreatedUtc = e.CreatedUtc
+
+                            });
+
+                var final = reviews.ToList();
+
+                foreach (var item in final)
+                {
+                    item.UserName = GetNameFromUserId(item.UserId);
+                }
+
+                return final;
             }
         }
+
+        public static string GetNameFromUserId(Guid userId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var user =
+                    ctx
+                        .Users
+                        .SingleOrDefault(u => u.Id == userId.ToString());
+
+                return user.UserName;
+            }
+        }
+
 
         public IEnumerable<ReviewListAllItem> GetAllReviews()
         {
@@ -102,7 +145,6 @@ namespace ThePodcastReview.Services
                         ReviewId = entity.ReviewId,
                         UserId = entity.OwnerId,
                         PodcastTitle = entity.PodcastTitle,
-                        Episode = entity.Episode,
                         Rating = entity.Rating,
                         Content = entity.Content,
                         FavEpisodes = entity.FavEpisodes,
@@ -123,7 +165,6 @@ namespace ThePodcastReview.Services
                         .Single(e => e.ReviewId == model.ReviewId && e.OwnerId == _userId);
 
                 entity.PodcastTitle = model.PodcastTitle;  
-                entity.Episode = model.Episode;
                 entity.Rating = model.Rating;
                 entity.Content = model.Content;
                 entity.FavEpisodes = model.FavEpisodes;

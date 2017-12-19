@@ -9,13 +9,15 @@ namespace ThePodcastReview.Models
 {
     public class ReviewEdit
     {
+        [Required]
         public int ReviewId { get; set; }
+
+        [Required]
+        public Guid UserId { get; set; }
 
         [Required]
         [Display(Name = "Podcast*")]
         public string PodcastTitle { get; set; }
-
-        public string Episode { get; set; }
 
         [Required]
         [Display(Name = "Rating*")]

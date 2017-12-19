@@ -10,7 +10,7 @@ namespace ThePodcastReview.Contracts
     public interface IReviewService
     {
         bool CreateReview(ReviewCreate model);
-        IEnumerable<ReviewListItem> GetReviews();
+        ICollection<ReviewListItem> GetReviews(int reviewId);
         IEnumerable<ReviewListAllItem> GetAllReviews();
         ReviewDetail GetReviewById(int reviewId);
         bool UpdateReview(ReviewEdit model);

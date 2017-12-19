@@ -10,11 +10,11 @@ namespace ThePodcastReview.Models
     public class ReviewCreate
     {
         [Required]
+        public Guid UserId { get; set; }
+        
+        [Required]
         [Display(Name = "Podcast*")]
         public string PodcastTitle { get; set; }
-
-        [Display(Name = "Episode")]
-        public string Episode { get; set; }
 
         [Required]
         [Display(Name = "Rating*")]        
