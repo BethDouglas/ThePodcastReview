@@ -31,7 +31,7 @@ namespace ThePodcastReview.Services
                 {
                     OwnerId = _userId,
                     PodcastTitle = model.PodcastTitle,
-                    Episode = model.Episode,
+                    //Episode = model.Episode,
                     Rating = model.Rating,
                     Content = model.Content,
                     FavEpisodes = model.FavEpisodes,
@@ -101,8 +101,8 @@ namespace ThePodcastReview.Services
                     {
                         ReviewId = entity.ReviewId,
                         UserId = entity.OwnerId,
-                        PodcastTitle = entity.PodcastTitle,
-                        Episode = entity.Episode,
+                        PodcastTitle = entity.PodcastTitle
+/*                        Episode = entity.Episode*/,
                         Rating = entity.Rating,
                         Content = entity.Content,
                         FavEpisodes = entity.FavEpisodes,
@@ -123,7 +123,7 @@ namespace ThePodcastReview.Services
                         .Single(e => e.ReviewId == model.ReviewId && e.OwnerId == _userId);
 
                 entity.PodcastTitle = model.PodcastTitle;  
-                entity.Episode = model.Episode;
+                //entity.Episode = model.Episode;
                 entity.Rating = model.Rating;
                 entity.Content = model.Content;
                 entity.FavEpisodes = model.FavEpisodes;

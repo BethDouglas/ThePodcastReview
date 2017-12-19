@@ -58,6 +58,10 @@
     <Compile Include="Migrations\201712061926128_update.Designer.cs">
       <DependentUpon>201712061926128_update.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712191634429_WhoKnows.cs" />
+    <Compile Include="Migrations\201712191634429_WhoKnows.Designer.cs">
+      <DependentUpon>201712191634429_WhoKnows.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Review.cs" />
@@ -69,6 +73,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201712061926128_update.resx">
       <DependentUpon>201712061926128_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712191634429_WhoKnows.resx">
+      <DependentUpon>201712191634429_WhoKnows.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
