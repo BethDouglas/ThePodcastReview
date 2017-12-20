@@ -9,7 +9,8 @@ import {
          MatToolbar,
          MatButtonModule,
          MatFormFieldModule,
-         MatInputModule
+         MatInputModule,
+         MatTableModule
 
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,10 +21,13 @@ import { RegistrationComponent } from './components/registration/registration.co
 
 import { AuthService } from './services/auth.service';
 import { LoginComponent } from './components/login/login.component';
+import { ReviewService } from './services/review.service';
+import { ReviewIndexComponent } from './components/review/review-index/review-index.component';
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'Review', component: ReviewIndexComponent },
   { path: '**', component: RegistrationComponent }
 ]
 
@@ -32,7 +36,8 @@ const routes = [
     AppComponent,
     HeaderComponent,
     RegistrationComponent,
-    LoginComponent
+    LoginComponent,
+    ReviewIndexComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +52,8 @@ const routes = [
     MatInputModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    ReviewService
   ],
   bootstrap: [AppComponent]
 })
