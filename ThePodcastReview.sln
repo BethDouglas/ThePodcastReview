@@ -17,6 +17,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePodcastReview.Web.Tests"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePodcastReview.WebAPI", "ThePodcastReview.WebAPI\ThePodcastReview.WebAPI.csproj", "{B325B1B8-986C-4376-AFE0-708E258AE07D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThePodcastReview.Wireframes", "ThePodcastReview.Wireframes", "{412A795E-4261-4C8E-933F-75938B985579}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sketch", "Sketch", "{501CC0EA-4835-4B7C-9491-378C2F648965}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Users\bethD\Desktop\Podcast Review Project\Sketch\Details.png = ..\..\Users\bethD\Desktop\Podcast Review Project\Sketch\Details.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Balsamiq", "Balsamiq", "{CAE2741D-45EA-41F2-A599-8561C208A501}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Users\bethD\Desktop\Podcast Review Project\Balsamiq\Create.png = ..\..\Users\bethD\Desktop\Podcast Review Project\Balsamiq\Create.png
+		..\..\Users\bethD\Desktop\Podcast Review Project\Balsamiq\Home.png = ..\..\Users\bethD\Desktop\Podcast Review Project\Balsamiq\Home.png
+		..\..\Users\bethD\Desktop\Podcast Review Project\Balsamiq\List.png = ..\..\Users\bethD\Desktop\Podcast Review Project\Balsamiq\List.png
+		..\..\Users\bethD\Desktop\Podcast Review Project\Balsamiq\Read.png = ..\..\Users\bethD\Desktop\Podcast Review Project\Balsamiq\Read.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,6 +69,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{501CC0EA-4835-4B7C-9491-378C2F648965} = {412A795E-4261-4C8E-933F-75938B985579}
+		{CAE2741D-45EA-41F2-A599-8561C208A501} = {412A795E-4261-4C8E-933F-75938B985579}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {468444D3-9FCA-49F8-AF97-05C48CA5E9B5}
