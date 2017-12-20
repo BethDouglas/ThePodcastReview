@@ -27,7 +27,7 @@ import { ReviewIndexComponent } from './components/review/review-index/review-in
 const routes = [
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'Review', component: ReviewIndexComponent },
+  { path: 'review', component: ReviewIndexComponent },
   { path: '**', component: RegistrationComponent }
 ]
 
