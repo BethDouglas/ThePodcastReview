@@ -32,6 +32,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Balsamiq", "Balsamiq", "{CA
 		..\..\Users\bethD\Desktop\Podcast Review Project\Balsamiq\Read.png = ..\..\Users\bethD\Desktop\Podcast Review Project\Balsamiq\Read.png
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePodcastReview.SQL", "ThePodcastReview.SQL\ThePodcastReview.SQL.csproj", "{DAAC675D-79EB-4EA0-89B0-FD9B30855C69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,6 +68,10 @@ Global
 		{B325B1B8-986C-4376-AFE0-708E258AE07D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B325B1B8-986C-4376-AFE0-708E258AE07D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B325B1B8-986C-4376-AFE0-708E258AE07D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAAC675D-79EB-4EA0-89B0-FD9B30855C69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAAC675D-79EB-4EA0-89B0-FD9B30855C69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAAC675D-79EB-4EA0-89B0-FD9B30855C69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAAC675D-79EB-4EA0-89B0-FD9B30855C69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
