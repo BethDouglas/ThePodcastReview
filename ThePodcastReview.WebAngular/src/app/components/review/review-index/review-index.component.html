@@ -1,3 +1,45 @@
-<p>
-  review-index works!
-</p>
+<h1>Index</h1>
+<a mat-raised-button color="primary">Create New</a>
+<hr>
+
+<div>
+  <mat-table #table [dataSource]="dataSource">
+    <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
+
+    <ng-container matColumnDef="details">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
+      <mat-cell *matCellDef="let note">
+          <i class="material-icons">library_books</i>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="ReviewId">
+      <mat-header-cell *matHeaderCellDef> Review # </mat-header-cell>
+      <mat-cell *matCellDef="let review"> {{review.ReviewId}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="PodcastTitle">
+      <mat-header-cell *matHeaderCellDef> Podcast </mat-header-cell>
+      <mat-cell *matCellDef="let review"> {{review.PodcastTitle}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Rating">
+      <mat-header-cell *matHeaderCellDef> Rating </mat-header-cell>
+      <mat-cell *matCellDef="let review"> {{review.Rating}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="CreatedUtc">
+      <mat-header-cell *matHeaderCellDef> Created </mat-header-cell>
+      <mat-cell *matCellDef="let review"> {{review.CreatedUtc | date:'fullDate'}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="buttons">
+      <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+      <mat-cell *matCellDef="let review">
+        <i mat-icon class="material-icons orange" color="warn" routerLink="/review/edit/{{review.ReviewId}}">edit</i>
+        <i class="material-icons red" routerLink="/review/delete/{{review.ReviewId}}">delete</i>
+      </mat-cell>
+    </ng-container>
+  </mat-table>
+</div>
