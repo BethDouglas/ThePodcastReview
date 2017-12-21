@@ -34,6 +34,10 @@ textarea {
 
 .panel-body {
     white-space: pre-line;
-    box-shadow: 0px, 0px, 10px, 0px;
+    box-shadow: 3px 3px 1px 1px rgba(159, 159, 160, .2);
+}
+
+.panel-heading {
+    box-shadow: 3px 0px 1px 1px rgba(159, 159, 160, .2);
 }
 
