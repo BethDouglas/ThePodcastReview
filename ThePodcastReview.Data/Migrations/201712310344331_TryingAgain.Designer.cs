@@ -7,13 +7,13 @@ namespace ThePodcastReview.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class WhoKnows : IMigrationMetadata
+    public sealed partial class TryingAgain : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(WhoKnows));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(TryingAgain));
         
         string IMigrationMetadata.Id
         {
-            get { return "201712191634429_WhoKnows"; }
+            get { return "201712310344331_TryingAgain"; }
         }
         
         string IMigrationMetadata.Source

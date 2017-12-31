@@ -54,17 +54,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\201712061926128_update.cs" />
-    <Compile Include="Migrations\201712061926128_update.Designer.cs">
-      <DependentUpon>201712061926128_update.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712191634429_WhoKnows.cs" />
-    <Compile Include="Migrations\201712191634429_WhoKnows.Designer.cs">
-      <DependentUpon>201712191634429_WhoKnows.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712310338595_updatingAgain.cs" />
-    <Compile Include="Migrations\201712310338595_updatingAgain.Designer.cs">
-      <DependentUpon>201712310338595_updatingAgain.cs</DependentUpon>
+    <Compile Include="Migrations\201712310344331_TryingAgain.cs" />
+    <Compile Include="Migrations\201712310344331_TryingAgain.Designer.cs">
+      <DependentUpon>201712310344331_TryingAgain.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,14 +67,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712061926128_update.resx">
-      <DependentUpon>201712061926128_update.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712191634429_WhoKnows.resx">
-      <DependentUpon>201712191634429_WhoKnows.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712310338595_updatingAgain.resx">
-      <DependentUpon>201712310338595_updatingAgain.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712310344331_TryingAgain.resx">
+      <DependentUpon>201712310344331_TryingAgain.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
