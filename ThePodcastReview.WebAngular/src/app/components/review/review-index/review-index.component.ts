@@ -12,7 +12,7 @@ import 'rxjs/add/observable/of';
 })
 export class ReviewIndexComponent implements OnInit {
   review: Review[];
-  columnNames = ['contentTrimmed','ReviewId', 'PodcastTitle', 'Rating', 'CreatedUtc', 'buttons'];
+  columnNames = ['ReviewId', 'PodcastTitle', 'Rating', 'CreatedUtc', 'buttons'];
   dataSource: ReviewDataSource | null;
 
   constructor(private _reviewService: ReviewService) { }

@@ -3,7 +3,6 @@ export interface Review {
     OwnerId?: number;
     PodcastTitle: string;
     Rating: number;
-    ContentTrimmed: string;
     CreatedUtc?: Date;
     ModifiedUtc?: Date;
 }

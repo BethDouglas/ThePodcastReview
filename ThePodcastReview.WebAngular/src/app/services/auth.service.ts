@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { RegisterUser } from '../models/REgisterUser';
+import { RegisterUser } from '../models/RegisterUser';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Token } from '../models/Token';
 import { Router } from '@angular/router';
@@ -28,7 +28,7 @@ export class AuthService {
       this.userInfo = token;
       localStorage.setItem('id_token', token.access_token);
       this.isLoggedIn.next(true);
-      this._router.navigate(['/review']);
+      this._router.navigate(['/api/review']);
     });
   }
 
