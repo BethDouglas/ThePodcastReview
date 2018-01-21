@@ -220,6 +220,9 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\FontAwesome.otf" />
+    <None Include="Properties\PublishProfiles\The-Podcast-Review - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\The-PodcastReview - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\ThePodcast-Review - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\ThePodcastReview - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

@@ -13,7 +13,7 @@ namespace ThePodcastReview.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201801062321002_initial"; }
+            get { return "201801210036411_initial"; }
         }
         
         string IMigrationMetadata.Source
